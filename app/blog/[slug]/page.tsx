@@ -1,4 +1,4 @@
-import { blogs } from "@/lib/blogs";
+import { blogs } from "@/lib/blogs/Index";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 

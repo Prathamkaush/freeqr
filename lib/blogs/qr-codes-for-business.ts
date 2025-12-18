@@ -1,4 +1,4 @@
-import { BlogPost } from "./index";
+import { BlogPost } from "./Index";
 
 const post: BlogPost = {
   slug: "qr-codes-for-business",
