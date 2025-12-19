@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://YOUR_DOMAIN/sitemap.xml",
+    sitemap: "https://www.freeqr.live/sitemap.xml",
   };
 }
