@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Content */}
         <div className="space-y-6 text-textSecondary leading-relaxed">
-          {post.content.split("\n").map((line, i) => {
+          {post.content.split("\n").map((line: string, i: number) => {
             if (line.startsWith("## ")) {
               return (
                 <h2

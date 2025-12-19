@@ -1,4 +1,4 @@
-import { BlogPost } from ".";
+import { BlogPost } from "./index";
 
 const post: BlogPost = {
   slug: "static-vs-dynamic-qr-codes",

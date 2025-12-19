@@ -1,4 +1,4 @@
-import { BlogPost } from ".";
+import { BlogPost } from "./index";
 
 const post: BlogPost = {
   slug: "what-is-a-wifi-qr-code",
