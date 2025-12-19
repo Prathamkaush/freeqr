@@ -1,11 +1,11 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/footer";
+import Script from "next/script";
 
 export const metadata = {
   title: "FreeQR – Free QR Code Generator",
-  description:
-    "Generate QR codes for URLs, WiFi, text, and more. Free forever.",
+  description: "Generate QR codes for URLs, WiFi, text, and more. Free forever.",
 };
 
 export default function RootLayout({
@@ -15,17 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4637001889924543"
-     crossorigin="anonymous"
-     strategy="afterInteractive"
-     ></script>
-      </head>
       <body>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4637001889924543"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
