@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import jsPDF from "jspdf";
 
-import PreviewPanel from "./preview";
-import InputPanel from "./input";
+import PreviewPanel from "./Preview";
+import InputPanel from "./Input";
 
 type QRType = "URL" | "TEXT" | "WIFI" | "WHATSAPP" | "EMAIL";
 

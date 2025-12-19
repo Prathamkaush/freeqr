@@ -1,4 +1,4 @@
-import  {BlogPost}  from "./Index";
+import  {BlogPost}  from ".";
 
 const post: BlogPost = {
   slug: "how-to-create-a-qr-code-for-free",

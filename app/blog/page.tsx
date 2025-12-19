@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { blogs } from "@/lib/blogs/Index";
+import { blogs } from "@/lib/blogs/index";
 
 export const metadata = {
   title: "Blog – FreeQR",

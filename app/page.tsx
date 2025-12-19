@@ -1,6 +1,6 @@
 import LiveQRGenerator from "@/components/qr/LiveQRGenerator";
 import HowToUse from "@/components/how-to-use/HowToUse";
-import BlogSection from "./blog/Page";
+import BlogSection from "./blog/page";
 import Link from "next/link";
 
 export default function HomePage() {
