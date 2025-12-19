@@ -15,7 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <head>
+        {/* ✅ AdSense verification script */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4637001889924543"
@@ -23,6 +24,11 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
+        {/* OPTIONAL: meta tag (can keep it, but not required) */}
+        {/* <meta name="google-adsense-account" content="ca-pub-4637001889924543" /> */}
+      </head>
+
+      <body>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
