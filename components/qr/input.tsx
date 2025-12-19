@@ -1,5 +1,6 @@
 import { FiLink, FiFileText, FiWifi, FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
+import { IndianRupee } from "lucide-react"; 
 
 const tabs = [
   { key: "URL", label: "URL", icon: <FiLink /> },
@@ -7,6 +8,7 @@ const tabs = [
   { key: "WIFI", label: "WiFi", icon: <FiWifi /> },
   { key: "WHATSAPP", label: "WhatsApp", icon: <FaWhatsapp /> },
   { key: "EMAIL", label: "Email", icon: <FiMail /> },
+  { key: "UPI", label: "UPI", icon: <IndianRupee size={14} /> },
 ];
 
 export default function InputPanel({
@@ -18,6 +20,7 @@ export default function InputPanel({
   setQrColor,
   qrSize,
   setQrSize,
+  isValidUPI,
 }: any) {
   return (
     <div className="space-y-8">
@@ -149,6 +152,60 @@ export default function InputPanel({
           />
         </div>
       )}
+
+{type === "UPI" && (
+  <div className="space-y-3">
+    <input
+      placeholder="UPI ID (e.g. name@upi)"
+      value={data.upiId}
+      onChange={(e) =>
+        setData({ ...data, upiId: e.target.value })
+      }
+      className="input"
+      required
+    />
+
+  {data.upiId && !isValidUPI(data.upiId) && (
+      <p className="text-xs text-red-500">
+        Please enter a valid UPI ID (example: name@upi)
+      </p>
+    )}
+
+    <input
+      placeholder="Payee name"
+      value={data.upiName}
+      onChange={(e) =>
+        setData({ ...data, upiName: e.target.value })
+      }
+      className="input"
+      required
+    />
+
+    <input
+      type="number"
+      placeholder="Amount (optional)"
+      value={data.upiAmount}
+      onChange={(e) =>
+        setData({ ...data, upiAmount: e.target.value })
+      }
+      className="input"
+    />
+
+    <input
+      placeholder="Note / purpose (optional)"
+      value={data.upiNote}
+      onChange={(e) =>
+        setData({ ...data, upiNote: e.target.value })
+      }
+      className="input"
+    />
+
+    <p className="text-xs text-gray-500">
+      Payments are handled by your UPI app. FreeQR does not process payments.
+    </p>
+  </div>
+)}
+
 
       {/* CUSTOMIZATION */}
       <div className="grid grid-cols-2 gap-6 pt-2">

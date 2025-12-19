@@ -7,7 +7,7 @@ import jsPDF from "jspdf";
 import PreviewPanel from "./Preview";
 import InputPanel from "./Input";
 
-type QRType = "URL" | "TEXT" | "WIFI" | "WHATSAPP" | "EMAIL";
+type QRType = "URL" | "TEXT" | "WIFI" | "WHATSAPP" | "EMAIL" | "UPI";
 
 export default function LiveQRGenerator() {
   const [type, setType] = useState<QRType>("URL");
@@ -28,7 +28,18 @@ export default function LiveQRGenerator() {
     email: "",
     subject: "",
     body: "",
+
+    upiId: "",
+  upiName: "",
+  upiAmount: "",
+  upiNote: "",
   });
+
+  const isValidUPI = (upi: string) => {
+  const upiRegex = /^[a-zA-Z0-9.\-_]{2,}@[a-zA-Z]{2,}$/;
+  return upiRegex.test(upi);
+};
+
 
   /* ---------------- PAYLOAD ---------------- */
   const buildPayload = () => {
@@ -54,6 +65,25 @@ export default function LiveQRGenerator() {
         return `mailto:${data.email}?subject=${encodeURIComponent(
           data.subject || ""
         )}&body=${encodeURIComponent(data.body || "")}`;
+
+  case "UPI":
+  if (!data.upiId || !data.upiName) return "";
+
+  if (!isValidUPI(data.upiId)) return "";
+
+  let upiUrl = `upi://pay?pa=${encodeURIComponent(
+    data.upiId
+  )}&pn=${encodeURIComponent(data.upiName)}&cu=INR`;
+
+  if (data.upiAmount) {
+    upiUrl += `&am=${encodeURIComponent(data.upiAmount)}`;
+  }
+
+  if (data.upiNote) {
+    upiUrl += `&tn=${encodeURIComponent(data.upiNote)}`;
+  }
+
+  return upiUrl;
 
       default:
         return "";
@@ -157,6 +187,7 @@ export default function LiveQRGenerator() {
           setQrColor={setQrColor}
           qrSize={qrSize}
           setQrSize={setQrSize}
+          isValidUPI={isValidUPI}
         />
 
         {/* RIGHT: PREVIEW */}

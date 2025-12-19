@@ -1,44 +1,69 @@
 export const metadata = {
   title: "Terms & Conditions – FreeQR",
   description:
-    "Terms and conditions for using the FreeQR QR code generator.",
+    "Read the terms and conditions for using the FreeQR QR code generator.",
 };
 
 export default function TermsPage() {
   return (
-    <section className="bg-[#fff7f9] py-20">
-      <div className="max-w-4xl mx-auto px-6 space-y-10">
+    <section className="py-20">
+      <div className="max-w-4xl mx-auto px-6 space-y-12">
 
-        <div className="text-center">
+        {/* Header */}
+        <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold text-brandBlack">
             Terms & Conditions
           </h1>
-          <p className="mt-4 text-brandGray">
-            Please read these terms carefully.
+          <p className="text-lg text-brandGray">
+            Please read these terms carefully before using FreeQR.
           </p>
         </div>
 
-        <div className="bg-white border rounded-xl p-8 space-y-6 text-brandGray text-sm leading-relaxed">
+        {/* Content */}
+        <div className="bg-white border rounded-2xl p-8 space-y-6 text-gray-700 text-sm leading-relaxed">
+
           <p>
-            By using FreeQR, you agree to use the service responsibly and
-            in compliance with applicable laws.
+            By accessing or using FreeQR, you agree to be bound by these
+            Terms and Conditions. If you do not agree with any part of
+            these terms, you should not use the service.
           </p>
 
           <p>
-            FreeQR is provided "as is" without warranties of any kind.
-            We do not guarantee uninterrupted availability or accuracy.
+            FreeQR is provided as a free tool for generating QR codes.
+            The service is offered on an “as is” and “as available” basis
+            without warranties of any kind.
           </p>
 
           <p>
-            You are responsible for the content encoded in QR codes
-            generated using FreeQR.
+            You are solely responsible for the content encoded in the QR
+            codes you generate using FreeQR. We do not review, monitor,
+            or store QR code content.
           </p>
 
           <p>
-            We reserve the right to modify or discontinue the service
-            at any time without notice.
+            FreeQR does not guarantee uninterrupted availability, accuracy,
+            or suitability for any particular purpose. Use of the service
+            is at your own risk.
           </p>
+
+          <p>
+            We reserve the right to modify, suspend, or discontinue any
+            part of the service at any time without prior notice.
+          </p>
+
+          <p>
+            These terms may be updated occasionally. Continued use of
+            FreeQR after changes are made constitutes acceptance of the
+            revised terms.
+          </p>
+
         </div>
+
+        {/* Footer Note */}
+        <p className="text-xs text-center text-gray-500">
+          If you have questions regarding these terms, please contact us
+          through the contact page.
+        </p>
 
       </div>
     </section>
