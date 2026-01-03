@@ -1,5 +1,3 @@
-import UPIFaq from "@/components/faq/UPIFaq";
-
 export const metadata = {
   title: "Free UPI QR Code Generator – Google Pay, PhonePe, Paytm",
   description:
@@ -74,7 +72,6 @@ export default function UPIQRLandingPage() {
             All transactions are handled securely by your UPI app.
           </p>
         </div>
-    <UPIFaq />
       </div>
     </section>
   );

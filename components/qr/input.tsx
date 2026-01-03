@@ -21,43 +21,47 @@ export default function InputPanel({
   qrSize,
   setQrSize,
   isValidUPI,
+  hideTypeSelector = false,
 }: any) {
   return (
     <div className="space-y-8">
 
       {/* QR TYPE SELECTOR */}
-      <div className="space-y-2">
-        <p className="text-xs font-medium text-textSecondary">
-          Choose QR type
-        </p>
+      {!hideTypeSelector && (
+  <div className="space-y-2">
+    <p className="text-xs font-medium text-textSecondary">
+      Choose QR type
+    </p>
 
-        <div className="flex flex-wrap gap-2">
-          {tabs.map((t) => {
-            const active = type === t.key;
+    <div className="flex flex-wrap gap-2">
+      {tabs.map((t) => {
+        const active = type === t.key;
 
-            return (
-              <button
-                key={t.key}
-                onClick={() => setType(t.key)}
-                className={`
-                  inline-flex items-center gap-1.5
-                  px-3 py-1.5
-                  rounded-md text-xs font-medium
-                  border transition
-                  ${
-                    active
-                      ? "bg-primary text-white border-primary"
-                      : "bg-background text-textSecondary border-borderDark hover:border-primary"
-                  }
-                `}
-              >
-                {t.icon}
-                {t.label}
-              </button>
-            );
-          })}
-        </div>
-      </div>
+        return (
+          <button
+  key={t.key}
+  onClick={() => setType(t.key)}
+  className={`
+    inline-flex items-center gap-1.5
+    px-3 py-1.5
+    rounded-md text-xs font-medium
+    border transition
+    ${
+      active
+        ? "bg-primary text-white border-primary"
+        : "bg-background text-textSecondary border-borderDark hover:border-primary"
+    }
+  `}
+>
+            {t.icon}
+            {t.label}
+          </button>
+        );
+      })}
+    </div>
+  </div>
+)}
+
 
       {/* INPUTS */}
       {type === "URL" && (
@@ -203,6 +207,55 @@ export default function InputPanel({
     <p className="text-xs text-gray-500">
       Payments are handled by your UPI app. FreeQR does not process payments.
     </p>
+  </div>
+)}
+
+{type === "VCARD" && (
+  <div className="space-y-3">
+    <input
+      placeholder="First name"
+      value={data.firstName}
+      onChange={(e) =>
+        setData({ ...data, firstName: e.target.value })
+      }
+      className="input"
+    />
+
+    <input
+      placeholder="Last name"
+      value={data.lastName}
+      onChange={(e) =>
+        setData({ ...data, lastName: e.target.value })
+      }
+      className="input"
+    />
+
+    <input
+      placeholder="Phone number"
+      value={data.vPhone}
+      onChange={(e) =>
+        setData({ ...data, vPhone: e.target.value })
+      }
+      className="input"
+    />
+
+    <input
+      placeholder="Email address"
+      value={data.vEmail}
+      onChange={(e) =>
+        setData({ ...data, vEmail: e.target.value })
+      }
+      className="input"
+    />
+
+    <input
+      placeholder="Company (optional)"
+      value={data.company}
+      onChange={(e) =>
+        setData({ ...data, company: e.target.value })
+      }
+      className="input"
+    />
   </div>
 )}
 
