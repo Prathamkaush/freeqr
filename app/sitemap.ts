@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/upi`,
+      url: `${baseUrl}/upi-qr`,
       lastModified: now,
       priority: 0.95,
     },
