@@ -84,5 +84,6 @@ export default function HowToCreateUPI() {
 
       </div>
     </section>
+    
   );
 }

@@ -13,6 +13,7 @@ import howToCreateUPIQR from "./how-to-create-a-upi-qr-code";
 // New SEO Blogs
 import marketingQR from "./how-to-use-qr-codes-for-marketing";
 import securityQR from "./qr-code-security-and-safety";
+import UpiQrCodeForSmallBusiness from "./upi-qr-code-for-small-business"
 
 export const blogs: BlogPost[] = [
   howToCreateQR,
@@ -22,4 +23,5 @@ export const blogs: BlogPost[] = [
   howToCreateUPIQR,
   marketingQR,
   securityQR,
+  UpiQrCodeForSmallBusiness,
 ];
