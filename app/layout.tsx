@@ -2,8 +2,10 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/footer";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
+  metadataBase: new URL("https://freeqr.live"),
   title: "FreeQR – Free QR Code Generator",
   description: "Generate QR codes for URLs, WiFi, text, and more. Free forever.",
 };
@@ -23,15 +25,15 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-
-        {/* OPTIONAL: meta tag (can keep it, but not required) */}
-        {/* <meta name="google-adsense-account" content="ca-pub-4637001889924543" /> */}
       </head>
 
       <body>
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
+        
+        {/* ✅ Vercel Analytics tracking component */}
+        <Analytics /> 
       </body>
     </html>
   );
