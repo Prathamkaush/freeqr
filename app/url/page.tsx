@@ -3,40 +3,52 @@ export const metadata = {
   description:
     "Create a website QR code to instantly open any URL. Free, fast, and privacy-friendly. No signup required.",
 };
+
 import LiveQRGenerator from "@/components/qr/LiveQRGenerator";
 import HowToCreateURL from "@/components/how-to-create-url/page";
+import  Link  from "next/link";
 
 export default function UrlQrPage() {
   return (
     <>
-      {/* INTRO + CONTENT */}
-      <section className="py-20">
+      {/* INTRO */}
+      <section className="pt-20 pb-10">
+        <div className="max-w-4xl mx-auto px-6 space-y-6">
+          <h1 className="text-4xl font-bold text-textPrimary">
+            Website QR Code Generator
+          </h1>
+
+          <p className="text-lg text-textSecondary">
+            A website QR code allows users to open a web page instantly by scanning
+            a QR code. It is commonly used on posters, business cards, menus,
+            product packaging, and advertisements.
+          </p>
+        </div>
+      </section>
+
+      {/* ✅ GENERATOR (moved up) */}
+      <section className="pb-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <LiveQRGenerator defaultType="URL" hideTypeSelector />
+        </div>
+      </section>
+
+      {/* CONTENT */}
+      <section className="py-20 border-t border-borderDark">
         <div className="max-w-4xl mx-auto px-6 space-y-10">
-
-          <header className="space-y-4">
-            <h1 className="text-4xl font-bold text-textPrimary">
-              Website QR Code Generator
-            </h1>
-
-            <p className="text-lg text-textSecondary">
-              A website QR code allows users to open a web page instantly
-              by scanning a QR code. It is commonly used on posters,
-              business cards, menus, product packaging, and advertisements.
-            </p>
-          </header>
 
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-textPrimary">
               What is a Website QR Code?
             </h2>
             <p className="text-textSecondary">
-              A website QR code encodes a web address (URL) into a scannable
-              code. When scanned using a smartphone camera or QR scanner,
-              the link opens instantly in the user’s browser.
+              A website QR code encodes a web address (URL) into a scannable code.
+              When scanned using a smartphone camera or QR scanner, the link opens
+              instantly in the user’s browser.
             </p>
             <p className="text-textSecondary">
-              This removes the need to manually type long or complex URLs
-              and improves accessibility and engagement.
+              This removes the need to manually type long or complex URLs and
+              improves accessibility and engagement.
             </p>
           </section>
 
@@ -69,19 +81,64 @@ export default function UrlQrPage() {
 
           <section className="bg-gray-50 border rounded-xl p-6 text-sm text-gray-600">
             <p>
-              FreeQR generates static website QR codes that never expire
-              and work as long as the destination URL is available.
+              FreeQR generates static website QR codes that never expire and
+              work as long as the destination URL is available.
             </p>
           </section>
 
         </div>
       </section>
 
-      {/* GENERATOR */}
-      <LiveQRGenerator defaultType="URL" hideTypeSelector />
-
       {/* HOW TO USE */}
       <HowToCreateURL />
+      {/* INTERNAL LINKS */}
+      <section className="mt-10 mb-10">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-surface border border-borderDark rounded-xl p-6 space-y-4">
+            <p className="text-sm text-gray-400">
+              You can also generate QR codes for other use cases:
+            </p>
+
+            <ul className="space-y-3">
+              <li>
+                <Link href="/wifi" className="text-white hover:text-primary">
+                  WiFi QR Code Generator →
+                </Link>
+              </li>
+              <li>
+                <Link href="/email" className="text-white hover:text-primary">
+                  Email QR Code Generator →
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section className="py-16 border-t border-borderDark">
+  <div className="max-w-4xl mx-auto px-6 space-y-6">
+    <h2 className="text-2xl font-semibold text-textPrimary">
+      Website QR Code FAQs
+    </h2>
+
+    <div className="space-y-4 text-textSecondary">
+      <p>
+        <strong>Do website QR codes expire?</strong><br />
+        No. Website QR codes generated with FreeQR are static and never expire.
+      </p>
+
+      <p>
+        <strong>Can I use a URL QR code for marketing?</strong><br />
+        Yes. They are commonly used in posters, menus, flyers, and ads.
+      </p>
+
+      <p>
+        <strong>Do you track scans or URLs?</strong><br />
+        No. FreeQR does not track scans, users, or URLs.
+      </p>
+    </div>
+  </div>
+</section>
+
     </>
   );
 }

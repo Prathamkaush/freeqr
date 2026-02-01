@@ -14,6 +14,7 @@ import howToCreateUPIQR from "./how-to-create-a-upi-qr-code";
 import marketingQR from "./how-to-use-qr-codes-for-marketing";
 import securityQR from "./qr-code-security-and-safety";
 import UpiQrCodeForSmallBusiness from "./upi-qr-code-for-small-business"
+import Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes from "./Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes"
 
 export const blogs: BlogPost[] = [
   howToCreateQR,
@@ -24,4 +25,5 @@ export const blogs: BlogPost[] = [
   marketingQR,
   securityQR,
   UpiQrCodeForSmallBusiness,
+  Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes,
 ];
