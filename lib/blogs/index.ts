@@ -16,6 +16,8 @@ import securityQR from "./qr-code-security-and-safety";
 import UpiQrCodeForSmallBusiness from "./upi-qr-code-for-small-business"
 import Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes from "./Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes"
 import freevspaidqrcodegenerators from "./free-vs-paid-qr-code-generators"
+import qrcodeforrestaurantsandcafes from "./qr-code-for-restaurants-and-cafes"
+
 export const blogs: BlogPost[] = [
   howToCreateQR,
   wifiQR,
@@ -26,5 +28,7 @@ export const blogs: BlogPost[] = [
   securityQR,
   UpiQrCodeForSmallBusiness,
   freevspaidqrcodegenerators,
+  qrcodeforrestaurantsandcafes,
   Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes,
+  
 ];
