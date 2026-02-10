@@ -1,5 +1,6 @@
 import LiveQRGenerator from "@/components/qr/LiveQRGenerator";
 import HowToCreateWhatsApp from "@/components/how-to-create-whatsapp/page";
+import WhatsAppQrFAQ from "@/components/faq/WhatsAppQrFAQ";
 
 export const metadata = {
   title: "WhatsApp QR Code Generator – Start Chat Instantly | FreeQR",
@@ -26,6 +27,8 @@ export default function WhatsAppQrPage() {
             </p>
           </header>
 
+      {/* GENERATOR */}
+      <LiveQRGenerator defaultType="WHATSAPP" hideTypeSelector />
           <section className="space-y-4">
             <h2 className="text-2xl font-semibold text-textPrimary">
               What is a WhatsApp QR Code?
@@ -76,11 +79,10 @@ export default function WhatsAppQrPage() {
         </div>
       </section>
 
-      {/* GENERATOR */}
-      <LiveQRGenerator defaultType="WHATSAPP" hideTypeSelector />
-
       {/* HOW TO USE */}
       <HowToCreateWhatsApp />
+
+      <WhatsAppQrFAQ />
     </>
   );
 }

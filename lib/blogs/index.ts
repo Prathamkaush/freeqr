@@ -17,6 +17,7 @@ import UpiQrCodeForSmallBusiness from "./upi-qr-code-for-small-business"
 import Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes from "./Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes"
 import freevspaidqrcodegenerators from "./free-vs-paid-qr-code-generators"
 import qrcodeforrestaurantsandcafes from "./qr-code-for-restaurants-and-cafes"
+import qrCodeForWhatsAppBusiness from "./qr-code-for-whatsapp-business"
 
 export const blogs: BlogPost[] = [
   howToCreateQR,
@@ -29,6 +30,7 @@ export const blogs: BlogPost[] = [
   UpiQrCodeForSmallBusiness,
   freevspaidqrcodegenerators,
   qrcodeforrestaurantsandcafes,
+  qrCodeForWhatsAppBusiness,
   Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes,
   
 ];
