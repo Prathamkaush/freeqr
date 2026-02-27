@@ -18,6 +18,7 @@ import Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes from "
 import freevspaidqrcodegenerators from "./free-vs-paid-qr-code-generators"
 import qrcodeforrestaurantsandcafes from "./qr-code-for-restaurants-and-cafes"
 import qrCodeForWhatsAppBusiness from "./qr-code-for-whatsapp-business"
+import HOW_TO_ADD_VARD_IN_APPLE_ID from "./HOW-TO-ADD-VARD-IN-APPLE-ID"
 
 export const blogs: BlogPost[] = [
   howToCreateQR,
@@ -31,6 +32,7 @@ export const blogs: BlogPost[] = [
   freevspaidqrcodegenerators,
   qrcodeforrestaurantsandcafes,
   qrCodeForWhatsAppBusiness,
+    HOW_TO_ADD_VARD_IN_APPLE_ID,
   Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes,
   
 ];
