@@ -10,15 +10,15 @@ import wifiQR from "./what-is-a-wifi-qr-code";
 import businessQR from "./qr-codes-for-business";
 import staticVsDynamic from "./static-vs-dynamic-qr-codes";
 import howToCreateUPIQR from "./how-to-create-a-upi-qr-code";
-// New SEO Blogs
 import marketingQR from "./how-to-use-qr-codes-for-marketing";
 import securityQR from "./qr-code-security-and-safety";
 import UpiQrCodeForSmallBusiness from "./upi-qr-code-for-small-business"
-import Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes from "./Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes"
+import UrlToQrcode from "./url-to-qr-code"
 import freevspaidqrcodegenerators from "./free-vs-paid-qr-code-generators"
 import qrcodeforrestaurantsandcafes from "./qr-code-for-restaurants-and-cafes"
 import qrCodeForWhatsAppBusiness from "./qr-code-for-whatsapp-business"
 import HOW_TO_ADD_VARD_IN_APPLE_ID from "./HOW-TO-ADD-VARD-IN-APPLE-ID"
+import VcardQrGuide from "./VcardQrGuide"
 
 export const blogs: BlogPost[] = [
   howToCreateQR,
@@ -33,6 +33,6 @@ export const blogs: BlogPost[] = [
   qrcodeforrestaurantsandcafes,
   qrCodeForWhatsAppBusiness,
     HOW_TO_ADD_VARD_IN_APPLE_ID,
-  Web_Address_to_QR_Code_Best_Practices_Examples_and_Common_Mistakes,
-  
+  UrlToQrcode,
+  VcardQrGuide,
 ];

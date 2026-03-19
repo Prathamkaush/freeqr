@@ -1,7 +1,7 @@
 import { BlogPost } from "./index";
 
 const post: BlogPost = {
-  slug: "web-address-to-qr-code-best-practices",
+  slug: "url-to-qr-code",
   title: "Web Address to QR Code: Best Practices, Examples, and Common Mistakes",
   description:
     "Master the art of converting URLs to QR codes. Learn the best practices for design, real-world examples, and how to avoid scanning failures.",
