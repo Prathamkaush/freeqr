@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
 import jsPDF from "jspdf";
+import { motion, AnimatePresence } from "framer-motion";
 
 import PreviewPanel from "./preview";
 import InputPanel from "./input";
@@ -25,6 +26,7 @@ export default function LiveQRGenerator({
 }) {
   const [type, setType] = useState<QRType>(defaultType);
   const [qr, setQr] = useState<string | null>(null);
+  const [isGenerating, setIsGenerating] = useState(false);
 
   /* CUSTOMIZATION */
   const [qrColor, setQrColor] = useState("#000000");
@@ -129,6 +131,7 @@ END:VCARD`;
       return;
     }
 
+    setIsGenerating(true);
     QRCode.toDataURL(payload, {
       width: qrSize,
       margin: 2,
@@ -137,8 +140,14 @@ END:VCARD`;
         light: "#ffffff",
       },
     })
-      .then(setQr)
-      .catch(() => setQr(null));
+      .then((url) => {
+        setQr(url);
+        setIsGenerating(false);
+      })
+      .catch(() => {
+        setQr(null);
+        setIsGenerating(false);
+      });
   }, [payload, qrColor, qrSize]);
 
   /* ---------------- DOWNLOADS ---------------- */
@@ -217,6 +226,7 @@ END:VCARD`;
           downloadQR={downloadPNG}
           downloadSVG={downloadSVG}
           downloadPDF={downloadPDF}
+          isGenerating={isGenerating}
         />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { FiLink, FiFileText, FiWifi, FiMail } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
-import { IndianRupee } from "lucide-react"; 
+import { IndianRupee } from "lucide-react";
+import { motion } from "framer-motion"; 
 
 const tabs = [
   { key: "URL", label: "URL", icon: <FiLink /> },
@@ -38,24 +39,26 @@ export default function InputPanel({
         const active = type === t.key;
 
         return (
-          <button
-  key={t.key}
-  onClick={() => setType(t.key)}
-  className={`
-    inline-flex items-center gap-1.5
-    px-3 py-1.5
-    rounded-md text-xs font-medium
-    border transition
-    ${
-      active
-        ? "bg-primary text-white border-primary"
-        : "bg-background text-textSecondary border-borderDark hover:border-primary"
-    }
-  `}
->
+          <motion.button
+            key={t.key}
+            onClick={() => setType(t.key)}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className={`
+              inline-flex items-center gap-1.5
+              px-3 py-1.5
+              rounded-md text-xs font-medium
+              border transition
+              ${
+                active
+                  ? "bg-primary text-white border-primary"
+                  : "bg-background text-textSecondary border-borderDark hover:border-primary"
+              }
+            `}
+          >
             {t.icon}
             {t.label}
-          </button>
+          </motion.button>
         );
       })}
     </div>

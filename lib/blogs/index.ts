@@ -17,6 +17,7 @@ import UrlToQrcode from "./url-to-qr-code"
 import freevspaidqrcodegenerators from "./free-vs-paid-qr-code-generators"
 import qrcodeforrestaurantsandcafes from "./qr-code-for-restaurants-and-cafes"
 import qrCodeForWhatsAppBusiness from "./qr-code-for-whatsapp-business"
+import bulkQRCodestrategy from "./bulk-qr-code-strategy"
 import HOW_TO_ADD_VARD_IN_APPLE_ID from "./HOW-TO-ADD-VARD-IN-APPLE-ID"
 import VcardQrGuide from "./VcardQrGuide"
 
@@ -32,7 +33,8 @@ export const blogs: BlogPost[] = [
   freevspaidqrcodegenerators,
   qrcodeforrestaurantsandcafes,
   qrCodeForWhatsAppBusiness,
-    HOW_TO_ADD_VARD_IN_APPLE_ID,
+  bulkQRCodestrategy,
+  HOW_TO_ADD_VARD_IN_APPLE_ID,
   UrlToQrcode,
   VcardQrGuide,
 ];
